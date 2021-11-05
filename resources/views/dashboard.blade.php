@@ -12,9 +12,9 @@
         </div>
     </div>
 
-    <div class="mx-auto w-3/3 flex flex-wrap justify-center items-center">
-        <div class=" shadow-md rounded">
-    <table class=" border-collapse ">
+    <div class="mx-auto w-3/3 flex  justify-center items-center">
+        <div class=" ">
+    <table class=" border-collapse  shadow-md rounded">
         <thead class="bg-black rounded-full">
         <tr>
             <th class="p-3 font-bold uppercase text-white ">First Name</th>
@@ -46,8 +46,16 @@
 
         @endforeach
         @endif
+
+
     </table>
+            <div class="text-white bg-black">
+                {{ $users->links() }}
+            </div>
     </div>
+
+
+
     </div>
 <div>
 

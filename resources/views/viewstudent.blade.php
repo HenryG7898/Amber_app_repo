@@ -89,6 +89,9 @@
                         @endif
                     </tr>
                     @endforeach
+                    <div class="text-white bg-black">
+                        {{ $data->links() }}
+                    </div>
                     @else
                         <h2 class="text-5xl font-bold mb-10 text-gray-800 text-center">Sorry! No Student Available</h2>
 
@@ -96,8 +99,11 @@
                 </table>
             </div>
             @endif
+
         </div>
+
     </div>
+
 @endsection
 
 {{--<form action="{{ route('subjectapprove') }}" method="post">--}}

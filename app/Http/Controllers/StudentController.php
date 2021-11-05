@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class StudentController extends Controller
 {
     public function view(){
-        $users = Student::all();
+        $users = Student::paginate(4);
         return view('dashboard', compact('users'));
     }
 

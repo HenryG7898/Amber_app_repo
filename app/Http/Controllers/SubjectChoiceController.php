@@ -44,7 +44,7 @@ class SubjectChoiceController extends Controller
     public function subjectlist($id){
         $data = Subject_choice::with(['students','subjects'])
             ->where('student_id',$id)
-            ->get();
+            ->paginate(3);
 
 
 

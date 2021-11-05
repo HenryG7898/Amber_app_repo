@@ -1,8 +1,11 @@
 @extends('Layout.app')
 @section('content')
-    <div class="text-center">
-        <div class="my-7"></div>
-        <h2 class="text-red-900 text-5xl font-bold">Subject List</h2>
+    <div class=" w-1/4 text-white rounded bg-black hover:bg-green-500 hover:text-black flex flex-col p-6 justify-center items-center bg-white shadow-md my-5 rounded m-auto">
+
+        <div class="text-2xl text-center text-black   font-bold">
+            <h1 class="text-red-900 text-5xl font-bold"> Subject List</h1>
+        </div>
+
     </div>
     <div class="my-10"></div>
     <table class="border-collapse w-full">
@@ -25,6 +28,9 @@
                 @endforeach
         @endif
     </table>
+    <div class="text-white bg-black">
+        {{ $users->links() }}
+    </div>
     <div>
             <a  href="{{ url('addsubject') }}" class="cursor-pointer w-1/4 text-white rounded bg-black hover:bg-green-500 hover:text-black flex flex-col p-6 justify-center items-center bg-white shadow-md my-10 rounded m-auto">
 

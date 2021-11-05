@@ -3,7 +3,7 @@
 @section('content')
     <div class="bg-white  m-auto my-28 p-3 rounded shadow-2xl w-6/12">
         <div >
-            <h1 class="text-center text-3xl font-bold mb-5 p-2">Select Subject for Student</h1>
+            <h1 class="text-center text-3xl font-bold mb-5 p-4">Select Subject for Student</h1>
             <form method="post" action="#" class=" flex flex-col m-auto  justify-center items-center ">
                 @csrf
 

@@ -15,15 +15,29 @@ class SubjectController extends Controller
     public function store(Request $request)
     {
 
-        $qual = new Subject();
-        $qual->subject_nm = $request->subject_nm;
-        $qual->cost_amt = $request->cost_amt;
-        $qual->save();
+        $choice = Subject::where([
+            'subject_nm' => $request->subject_nm,
+        ])->exists();
+
+        if (!$choice) {
+            Subject::create([
+                'subject_nm' => $request->subject_nm,
+                'cost_amt' => $request->cost_amt,
+
+            ]);
+            return redirect('subject');
+        }
         return redirect('subject');
+
+//        $qual = new Subject();
+//        $qual->subject_nm = $request->subject_nm;
+//        $qual->cost_amt = $request->cost_amt;
+//        $qual->save();
+//        return redirect('subject');
     }
 
     public function show(){
-        $users = Subject::all();
+        $users = Subject::paginate(3);
         return view('subject',compact('users'));
     }
 

@@ -43,3 +43,6 @@ Route::post('subjectchoice',[\App\Http\Controllers\SubjectChoiceController::clas
 Route::get('/subjectlist/{id}',[\App\Http\Controllers\SubjectChoiceController::class,'subjectlist']);
 Route::post('/subjectapprove/{id}',[\App\Http\Controllers\SubjectChoiceController::class,'approve'])->name('subjectapprove');
 Route::post('/subjectdeny/{id}',[\App\Http\Controllers\SubjectChoiceController::class,'deny'])->name('subjectdeny');
+
+//payments
+Route::get('payment',[\App\Http\Controllers\PaymentController::class,'index']);
